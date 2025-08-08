@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'My Site',
+  title: 'AI Tooling by Athar Khara, PhD',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
@@ -139,8 +139,8 @@ const config: Config = {
       copyright: `Copyright © ${new Date().getFullYear()} Athar Kharal, PhD. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismThemes.oceanicNext,
+      darkTheme: prismThemes.jettwaveDark,
     },
   } satisfies Preset.ThemeConfig,
 };
