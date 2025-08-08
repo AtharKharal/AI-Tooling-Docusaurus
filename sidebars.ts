@@ -1,48 +1,61 @@
-// sidebars.ts
-import type { SidebarsConfig } from '@docusaurus/plugin-content-docs';
-
-const sidebars: SidebarsConfig = {
+module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'Overview',
-      items: ['overview/index'],
-    },
-    {
-      type: 'category',
-      label: 'Getting Started',
+      label: 'AI Tools',
       items: [
-        'getting-started/installation',
-        'getting-started/authentication',
+        'tools/chatgpt',
+        'tools/claude',
+        'tools/gemini',
+        'tools/minimax',
+        'tools/comparison',
       ],
     },
     {
       type: 'category',
-      label: 'Guides',
+      label: 'Workflows',
       items: [
-        'guides/payments',
-        'guides/testing',
+        'workflows/tool-chaining',
+        'workflows/context-engineering',
+        'workflows/automation',
       ],
     },
     {
       type: 'category',
-      label: 'API',
+      label: 'Prompt Design',
       items: [
-        'api/charges',
-        'api/customers',
-        'api/webhooks',
+        'prompt-design/principles',
+        'prompt-design/advanced',
+        'prompt-design/for-research',
+        'prompt-design/for-devops',
       ],
     },
     {
       type: 'category',
-      label: 'Reference',
+      label: 'Customization',
       items: [
-        'reference/openapi',
-        'reference/errors',
+        'customization/plugins',
+        'customization/wrappers',
+        'customization/apis',
       ],
     },
-    'changelog',
+    {
+      type: 'category',
+      label: 'Use Cases',
+      items: [
+        'use-cases/academic',
+        'use-cases/technical-writing',
+        'use-cases/business-automation',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Resources',
+      items: [
+        'resources/glossary',
+        'resources/curated-links',
+        'resources/faq',
+      ],
+    },
   ],
 };
-
-export default sidebars;
