@@ -5,6 +5,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+
 import styles from './index.module.css';
 
 function HomepageHeader() {
@@ -79,7 +80,7 @@ export default function Home(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title} Intelligent Docs for the AI Era`}
+      title={`${siteConfig.title} – Intelligent Docs for the AI Era`}
       description="A clean, precise, and advanced guide to AI-powered documentation and developer tooling."
     >
       <HomepageHeader />

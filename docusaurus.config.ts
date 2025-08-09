@@ -2,35 +2,22 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'AI Tooling by Athar Khara, PhD',
-  tagline: 'Dinosaurs are cool',
+  title: 'AI Tooling Hub — Athar Kharal, PhD',
+  tagline: 'Precision-crafted documentation & developer workflows for the AI era',
   favicon: 'img/favicon.ico',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
+  future: { v4: true },
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  url: 'http://localhost:3000',
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'AtharKharal',
+  projectName: 'ai-tooling-docs-hub',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -42,107 +29,74 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/AtharKHaral/ai-tooling-docs-hub/edit/main/',
         },
         blog: {
           showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
+          feedOptions: { type: ['rss', 'atom'], xslt: true },
+          editUrl: 'https://github.com/AtharKHaral/ai-tooling-docs-hub/edit/main/',
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
           onUntruncatedBlogPosts: 'warn',
         },
-        theme: {
-          customCss: './src/css/custom.css',
-        },
+        theme: { customCss: './src/css/custom.css' },
       } satisfies Preset.Options,
     ],
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/AI Tooling Social Card2.png',
+    image: 'img/social-card-ai-tooling.png',
+    metadata: [
+      { name: 'keywords', content: 'AI tooling, DocOps, developer workflows, automation' },
+      { name: 'author', content: 'Athar Kharal, PhD' },
+    ],
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'AI Tooling',
-      logo: {
-        alt: 'AI Tooling',
-        src: 'img/logo.svg',
-      },
+      logo: { alt: 'AI Tooling Logo', src: 'img/logo.svg' },
       items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'docs',
-          position: 'left',
-          label: 'Documentation',
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
-        {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
-        },
+        { type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs' },
+        { to: '/blog', label: 'Blog', position: 'left' },
+        { href: 'https://github.com/AtharKHaral/ai-tooling-docs-hub', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Overview',
-              to: '/docs/overview',
-            },
-          ],
+          title: 'Documentation',
+          items: [{ label: 'Overview', to: '/' }],
         },
         {
-          title: 'Portfolio',
+          title: 'Connect',
           items: [
-            {
-              label: 'Personal Portfolio',
-              href: 'https://athar-techwriter.vercel.app',
-            },
-            {
-              label: 'WhatsApp',
-              href: 'https://wa.me/923001234567?text=Hello%2C%20Dr.%20Athar',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/atharkharal',
-            },
+            { label: 'Portfolio', href: 'https://athar-techwriter.vercel.app' },
+            { label: 'WhatsApp', href: 'https://wa.me/923001234567?text=Hello%2C%20Dr.%20Athar' },
+            { label: 'X / Twitter', href: 'https://x.com/atharkharal' },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/AtharKHaral',
-            },
+            { label: 'Blog', to: '/blog' },
+            { label: 'GitHub Profile', href: 'https://github.com/AtharKHaral' },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Athar Kharal, PhD. Built with Docusaurus.`,
+      copyright: `© ${new Date().getFullYear()} Athar Kharal, PhD — Built with Docusaurus`,
     },
     prism: {
-      theme: prismThemes.oceanicNext,
-      darkTheme: prismThemes.jettwaveDark,
+      // Use a distinctive combo — hardly anyone uses these together
+      theme: prismThemes.vsLight,
+      darkTheme: prismThemes.dracula,
+      additionalLanguages: ['bash', 'json', 'python', 'typescript'],
     },
   } satisfies Preset.ThemeConfig,
 };
+
 
 export default config;

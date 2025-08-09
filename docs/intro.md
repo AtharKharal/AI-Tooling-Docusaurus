@@ -2,7 +2,7 @@
 id: index
 title: AI Tooling Hub
 description: Overview of AI tools, workflows, and customization
-slug: /
+slug: intro
 ---
 
 # Welcome to AI Tooling Hub
