@@ -46,7 +46,7 @@ function PrimaryCard() {
           className={styles.button}
           to="https://github.com/atharkharal/ai-tooling-docs-hub"
         >
-          GtHub Repo →
+          GitHub Repo →
         </Link>
 
         {/* <LinkCard href="https://github.com/atharkharal/ai-tooling-docs-hub" label="GitHub Repo" /> */}

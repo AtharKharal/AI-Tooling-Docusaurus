@@ -3,9 +3,8 @@ import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
-  title: "AI Tooling Hub — Athar Kharal, PhD",
-  tagline:
-    "Precision-crafted documentation & developer workflows for the AI era",
+  title: "AI Tooling Hub",
+  tagline: "A Docusaurus site developed by Athar Kharal, PhD",
   favicon: "img/favicon.ico",
 
   future: { v4: true },
