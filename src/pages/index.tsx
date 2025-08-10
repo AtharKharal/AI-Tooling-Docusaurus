@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import type { ReactNode } from "react";
+import Link from "@docusaurus/Link";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import styles from './index.module.css';
+import styles from "./index.module.css";
 
 // New Components for the Bento Grid Layout
 
@@ -16,12 +16,12 @@ import styles from './index.module.css';
  *   isPrimary?: boolean
  * }} props
  */
-function Card({ children, className = '', isPrimary = false }) {
+function Card({ children, className = "", isPrimary = false }) {
   const cardClasses = [
     styles.card,
-    isPrimary ? styles.primaryCard : '',
+    isPrimary ? styles.primaryCard : "",
     className,
-  ].join(' ');
+  ].join(" ");
 
   return <div className={cardClasses}>{children}</div>;
 }
@@ -35,12 +35,21 @@ function PrimaryCard() {
     <Card isPrimary={true} className={styles.primaryCardContent}>
       <h1 className={styles.mainTitle}>{siteConfig.title}</h1>
       <p className={styles.mainTagline}>
-        {siteConfig.tagline || 'A curated hub for modern AI tooling, developer workflows, and documentation automation.'}
+        {siteConfig.tagline ||
+          "A curated hub for modern AI tooling, developer workflows, and documentation automation."}
       </p>
       <div className={styles.buttons}>
         <Link className={styles.button} to="/docs/intro">
           Get Started →
         </Link>
+        <Link
+          className={styles.button}
+          to="https://github.com/atharkharal/ai-tooling-docs-hub"
+        >
+          GtHub Repo →
+        </Link>
+
+        {/* <LinkCard href="https://github.com/atharkharal/ai-tooling-docs-hub" label="GitHub Repo" /> */}
       </div>
     </Card>
   );
@@ -66,7 +75,10 @@ function QuoteCard() {
   return (
     <Card className={styles.quoteCard}>
       <blockquote>
-        <p>"Documentation is not an afterthought—it's the interface between human reasoning and machine logic."</p>
+        <p>
+          "Documentation is not an afterthought—it's the interface between human
+          reasoning and machine logic."
+        </p>
         <footer>— Athar Kharal, PhD</footer>
       </blockquote>
     </Card>
@@ -97,11 +109,20 @@ function HeroGrid() {
   return (
     <div className={styles.heroGrid}>
       <PrimaryCard />
-      <FeatureCard title="⚙️ Toolkits" content="Get hands-on with AI-enabled CLI tools, static site generators, and documentation engines." />
-      <FeatureCard title="📚 Methodologies" content="Learn modern DocOps, Git-based authoring, and content automation strategies." />
+      <FeatureCard
+        title="⚙️ Toolkits"
+        content="Get hands-on with AI-enabled CLI tools, static site generators, and documentation engines."
+      />
+      <FeatureCard
+        title="📚 Methodologies"
+        content="Learn modern DocOps, Git-based authoring, and content automation strategies."
+      />
       <QuoteCard />
-      <LinkCard href="https://github.com/atharkharal/ai-tooling-docs-hub" label="GitHub Repo" />
-      <FeatureCard title="🧠 Conceptual Clarity" content="Explore the philosophy and architecture of knowledge systems in the AI era." />
+
+      <FeatureCard
+        title="🧠 Conceptual Clarity"
+        content="Explore the philosophy and architecture of knowledge systems in the AI era."
+      />
     </div>
   );
 }
@@ -117,7 +138,7 @@ export default function Home(): ReactNode {
         <HeroGrid />
         {/* HomepageFeatures can be kept if you have other content, or removed if the grid is sufficient */}
         <div className={styles.featuresSection}>
-            <HomepageFeatures />
+          <HomepageFeatures />
         </div>
       </main>
     </Layout>
