@@ -62,7 +62,7 @@ const config: Config = {
     },
     navbar: {
       title: "AI Tooling",
-      logo: { alt: "AI Tooling Logo", src: "img/logo.svg" },
+      logo: { alt: "AI Tooling Logo", src: "img/logo.png" },
       items: [
         {
           type: "docSidebar",
