@@ -61,11 +61,11 @@ const config: Config = {
       items: [
         { type: 'docSidebar', sidebarId: 'docs', position: 'left', label: 'Docs' },
         { to: '/blog', label: 'Blog', position: 'left' },
-        { href: 'https://github.com/AtharKHaral/ai-tooling-docs-hub', label: 'GitHub', position: 'right' },
+        { href: 'https://github.com/AtharKharal/ai-tooling-docs-hub', label: 'GitHub', position: 'right' },
       ],
     },
     footer: {
-      style: 'light',
+      style: 'dark',
       links: [
         {
           title: 'Documentation',
